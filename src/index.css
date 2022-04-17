@@ -1,0 +1,140 @@
+*{
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body{
+  background-color: rgb(29, 6, 51);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.titleMain{
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+.Todo{
+  background-color: rgb(50, 26, 77);
+  width: max-content;
+  padding: 15px;
+  border-radius: 10px;
+  height: 450px;
+  overflow: hidden;
+}
+.Header{
+  display: flex;
+  justify-content: space-around;
+}
+.InputTask{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-image: linear-gradient(to left, rgb(255, 255, 255), rgb(255, 255, 255)) 1;
+  background-color: transparent;
+  color: white;
+  margin-right: 10px;
+  transition: border-image 1.2s;
+}
+.InputTask:focus{
+  border-image: linear-gradient(to left, rgb(111, 20, 142), #f33 ) 1;
+}
+.InputTask::placeholder{
+  color: #ccc;
+}
+.addButton {
+  color: greenyellow;
+  background-color: transparent;
+  padding: 0px 5px;
+  font-size: 25px;
+  border: 1px solid white;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.removeButton {
+  color: rgb(199, 44, 44);
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 4px 6px;
+  margin-right: 6px;
+}
+.titleList{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.taskList{
+  height: 300px;
+  overflow: auto;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+.list{
+  display: flex ;
+  align-items: center;
+  border-radius: 5px;
+  color: white;
+  height: 60px;
+  background-color: rgb(54, 11, 71);
+  width: 100%;
+  margin-top: 10px;
+}
+.listTrue{
+  display: flex ;
+  align-items: center;
+  border-radius: 5px;
+  color: white;
+  height: 60px;
+  background-color: rgb(54, 11, 71);
+  width: 100%;
+  margin-top: 10px;
+  border-bottom: 3px solid greenyellow;
+}
+.Title{
+  word-wrap: break-word;
+  width: 145px;
+}
+.Description{
+  width: 186px;
+  word-wrap: break-word;
+}
+.buttonClearArea{
+  display: flex;
+  justify-content: right;
+}
+.clearButton{
+  margin: 5px 3px;
+  font-size: 13px;
+  color: white;
+  justify-self: right;
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 3px;
+}
+.clearButton:hover{
+  color: grey;
+  justify-self: right;
+}
+@media screen and (max-width: 420px) {
+  .taskList{
+    height: 75%;
+    overflow: auto;
+  }
+  .buttonClearArea{
+    margin-top: 40px;
+    align-self: flex-end;
+  }
+  .Todo{
+    height: 100vh;
+    width: 100%;
+    font-size: 20px;
+  }
+}
