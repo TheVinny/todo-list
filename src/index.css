@@ -136,5 +136,6 @@ body{
     height: 100vh;
     width: 98%;
     font-size: 20px;
+    padding: 10px;
   }
 }
